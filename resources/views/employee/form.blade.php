@@ -117,10 +117,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-5">
-                                        <div class="form-group">
-                                            <label for="name" class="font-normal">Phone</label>
-                                            {!! Form::text('phone', null , ['class' => 'form-control', 'id' => 'phone', 'maxlength' => '24']) !!}
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="form-group">

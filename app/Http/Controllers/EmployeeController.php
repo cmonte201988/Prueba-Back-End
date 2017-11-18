@@ -66,7 +66,7 @@ class EmployeeController extends Controller
                 $data = [
                     'id' => md5(uniqid()),
                     'isOnline' => $request->input('isOnline', Employee::STATE_ONLINE_ACTIVE),
-                    'salary' => number_format((!is_null($request->input('salary', null)) ? $request->input('salary', null): 0), 2, '.', ','),
+                    'salary' => (!is_null($request->input('salary', null)) ? $request->input('salary', null): 0),
                     'age' => $request->input('age', 0),
                     'position' => $request->input('position', null),
                     'name' => trim($request->input('name', null)),
@@ -100,7 +100,7 @@ class EmployeeController extends Controller
 
                 $employee->isOnline = $request->input('isOnline', null);
                 if ($request->input('salary', null) != $employee->salary)
-                    $employee->salary = number_format((!is_null($request->input('salary', null)) ? $request->input('salary', null): 0), 2, '.', ',');
+                    $employee->salary = (!is_null($request->input('salary', null)) ? $request->input('salary', null): 0);
                 
                 $employee->age = $request->input('age', 0);
                 $employee->position = $request->input('position', null);

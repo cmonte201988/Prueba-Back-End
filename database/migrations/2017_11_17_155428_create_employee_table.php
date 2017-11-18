@@ -17,7 +17,7 @@ class CreateEmployeeTable extends Migration
             $table->increments('id_user');
             $table->string('id', 50);            
             $table->char('isOnline', 1)->default(1);
-            $table->char('salary', 11)->nullable();
+            $table->decimal('salary', 9, 2)->nullable();
             $table->char('age', 3)->nullable();
             $table->string('position')->nullable();
             $table->string('name');

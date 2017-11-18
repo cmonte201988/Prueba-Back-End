@@ -19,5 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //-- Api V1
 Route::group(['prefix' => 'v1'], function () {
-    Route::get('/employee/get-search-by-salary', 'Api\V1\EmployeeController@getSearchBySalary')->name('api.v1.employee.index'); 
+    Route::get('/employee/get-search-by-salary/{range?}', 'Api\V1\EmployeeController@getSearchBySalary')->name('api.v1.employee.index'); 
 });

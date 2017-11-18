@@ -15,10 +15,13 @@ class EmployeesTableSeeder extends Seeder
         $dataJson = json_decode(file_get_contents($path), true); 
 
         foreach($dataJson as $row) {
+            $salaryTemp = substr($row['salary'], 1);
+            $salaryTemp = str_replace(',', '', $salaryTemp);
+
             DB::table('employees')->insert([
                 'id' => $row['id'],
                 'isOnline' => ($row['isOnline']) ? 1: 0,
-                'salary' => substr($row['salary'], 1),
+                'salary' => $salaryTemp,
                 'age' => $row['age'],
                 'position' => $row['position'],
                 'name' => $row['name'],

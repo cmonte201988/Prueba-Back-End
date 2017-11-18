@@ -66,7 +66,7 @@
                                 <td>{{ $rowEmployee->name }}</td> 
                                 <td>{{ $rowEmployee->email }}</td> 
                                 <td>{{ strtoupper($rowEmployee->position) }}</td> 
-                                <td>$ {{ ($rowEmployee->salary) ? $rowEmployee->salary : 0 }}</td> 
+                                <td>$ {{ ($rowEmployee->salary) ? number_format($rowEmployee->salary, 2, '.', ',') : 0 }}</td> 
                                 <td>
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#preview{{ ($rowEmployee->id_user) }}">
                                     detail
@@ -101,7 +101,7 @@
                                                                 <td><strong>Position</strong></td><td>{{ strtoupper($rowEmployee->position) }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><strong>Salary</strong></td><td>$ {{ ($rowEmployee->salary) ? $rowEmployee->salary : 0 }}</td>
+                                                                <td><strong>Salary</strong></td><td>$ {{ ($rowEmployee->salary) ? number_format($rowEmployee->salary, 2, '.', ',') : 0 }}</td>
                                                             </tr>                                                            
                                                             <tr>
                                                                 <td><strong>Is online</strong></td>

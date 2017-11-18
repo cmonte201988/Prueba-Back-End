@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class Employee extends Model
 {
@@ -15,4 +16,18 @@ class Employee extends Model
     public $primaryKey = 'id_user';
     public $timestamps = false;
 
+    public function listByRangeSalary($rangeMin = null, $rangeMax = null)
+    {
+        $result = DB::table(self::TABLE_NAME)
+            ->orderBy('name', 'ASC');
+        
+        if (!is_null($rangeMin))
+            $result->where('salary', '>=', $rangeMin);
+
+        if (!is_null($rangeMax))
+            $result->where('salary', '<=', $rangeMax);
+
+        //dd($result->toSql());       
+        return $result->get();
+    }
 }
