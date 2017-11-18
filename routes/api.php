@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//-- Api V1
+Route::group(['prefix' => 'v1'], function () {
+    Route::get('/employee/get-search-by-salary', 'Api\V1\EmployeeController@getSearchBySalary')->name('api.v1.employee.index'); 
+});

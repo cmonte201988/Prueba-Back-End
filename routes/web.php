@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'EmployeeController@index')->name('employee.index'); 
+Route::get('/form/{id?}', 'EmployeeController@form')->name('employee.form');
+Route::post('/proccess', 'EmployeeController@proccess')->name('employee.proccess');
