@@ -35,3 +35,18 @@ php artisan db:seed
 // Iniciar Proyecto
 php artisan serve
 ```
+
+- Para probar el servicio de lista de empleados en base a un rango salarial, se debera agregar ingresar a la url siguiente.
+
+**URL**:  DOMINIO/api/v1/employee/get-search-by-salary/RANGE1-RANGE2
+
+Formato Rango salarial
+----------------------
+
+```
+Ejemplo: rango entre 1000 y 2000
+RANGE1-RANGE2   <=>   1000-2000
+Quedando en la URL: 
+DOMINIO/api/v1/employee/get-search-by-salary/1000-2000
+
+```
