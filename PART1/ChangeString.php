@@ -7,7 +7,7 @@ class ChangeString
         "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
     );
     
-    public function proccess($text)
+    public function build($text)
     {        
         $newText = '';
         for ($i=0; $i < strlen($text); $i++) { 
@@ -31,4 +31,11 @@ class ChangeString
 
 }
 
+$changeString = new ChangeString();
+
+echo "123 abcd *3  <=====> " . $changeString->build("123 abcd *3");
+echo "<br>";
+echo "**Casa 52  <=====> " . $changeString->build("**Casa 52");
+echo "<br>";
+echo "**Casa 52Z  <=====> " . $changeString->build("**Casa 52Z");
 ?>
