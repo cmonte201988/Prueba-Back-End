@@ -11,7 +11,9 @@ Se desarrollan las clases de los enunciados, se tiene que ejecutar las clases pa
 2ra Parte
 ------------- 
 
-Esta se desarrolla usando el Framework **LARAVEL**. Primero se tiene que configurar el archivo **.env**, en el se debe hacer referencia a una BD vacia pára hacer la migracion de los empleados.
+Esta se desarrolla usando el Framework **LARAVEL**. Primero se tiene que configurar el archivo **.env**, en el se debe hacer referencia a una Base de Datos (en Mysql) vacia pára hacer la migracion de los empleados.
+
+- La versión de PHP debe ser >=5.6.4
 
 - Luego de configurar el archivo .env, ejecutar los siguientes comandos.
 
